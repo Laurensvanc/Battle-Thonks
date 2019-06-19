@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         m_MovementAxisName = "Vertical" + m_PlayerNumber;
-        m_TurnAxisName = "Horizontal" + m_PlayerNumber;
+        
 
         //m_OriginalPitch = m_MovementAudio.pitch;
     }
@@ -48,8 +48,7 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         m_MovementInputValue = Input.GetAxis(m_MovementAxisName);
-        m_TurnInputValue = Input.GetAxis(m_TurnAxisName);
-
+        
         //EngineAudio();
     }
 
@@ -90,10 +89,13 @@ public class PlayerController : MonoBehaviour
 
     void Turn()
     {
-        float turn = m_TurnInputValue * m_TurnSpeed * Time.deltaTime;
-
-        Quaternion turnRotation = Quaternion.Euler(0f, turn, 0f);
-
-        m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(0, 2, 0);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(0, -2, 0);
+        }
     }
 }
