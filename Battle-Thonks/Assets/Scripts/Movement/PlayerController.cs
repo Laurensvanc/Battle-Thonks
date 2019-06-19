@@ -15,8 +15,7 @@ public class PlayerController : MonoBehaviour
     private string m_MovementAxisName;
     private string m_TurnAxisName;
     private Rigidbody m_Rigidbody;
-    private float m_MovementInputValue;
-    private float m_TurnInputValue;
+    private float m_MovementInputValue;   
     private float m_OriginalPitch;
 
     private void Awake()
@@ -28,8 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         m_Rigidbody.isKinematic = false;
 
-        m_MovementInputValue = 0f;
-        m_TurnInputValue = 0f;
+        m_MovementInputValue = 0f;      
     }
 
     private void OnDisable()
@@ -39,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        m_MovementAxisName = "Vertical" + m_PlayerNumber;
+        m_MovementAxisName = "Vertical";
         
 
         //m_OriginalPitch = m_MovementAudio.pitch;
