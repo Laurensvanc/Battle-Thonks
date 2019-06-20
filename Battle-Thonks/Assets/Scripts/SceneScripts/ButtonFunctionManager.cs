@@ -11,6 +11,11 @@ public class ButtonFunctionManager : MonoBehaviour
         SceneManager.LoadScene("ThonkGround", LoadSceneMode.Single);
     }
 
+    public void doChangeSceneMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu", LoadSceneMode.Single);
+    }
+
     public void doExitGame()
     {
         Application.Quit();

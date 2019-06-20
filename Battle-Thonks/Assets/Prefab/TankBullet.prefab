@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 81698b6f7edbd2742b006c57bee8a883, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,8 +109,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7397903af9200574fbfff8b9405dd931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsToDestroy: 1
-  speed: 70
+  m_TankMask:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExplosionParticles: {fileID: 19807510, guid: 369163559f065624bb85bcf89a98b84f,
+    type: 3}
+  m_MaxDamage: 100
+  m_ExplosionForce: 1000
+  m_MaxLifeTime: 2
+  m_ExplosionRadius: 5
 --- !u!136 &2309128811570465071
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +126,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220797358720650696}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.44
   m_Height: 1.43
